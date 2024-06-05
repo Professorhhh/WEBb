@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="home.css">
+    <style>
+        #cameraModal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+        }
+        #cameraModalContent {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            text-align: center;
+        }
+        #cameraFeed {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="pre">
+        <div id="web">
+           <center>
+            <h1 id="h">WEB</h1>
+           </center>
+        </div>
+        <div id="tech">
+            <h1 id="hh">TECH</h1>
+        </div>
+    </div>
+
+    <div id="main">
+        <div id="flex">
+        <div id="nav">
+            <div id="child1">
+                <div id="webb">
+                    <h1>WEB</h1>
+                </div>
+                <span id="sp1"><h1>TECH</h1></span>
+            </div>
+            <div id="child2">
+                <ul>
+                    <a href="home.html"><li>Home</li></a>
+                    <a href="about.html"><li>About Us</li></a>
+                    <a href="products.html"><li>Products</li></a>
+                    <a href="contact.html"><li>Contact</li></a>
+                 </ul>
+            </div>
+        </div>
+        <div id="bg"> </div>
+        <div id="te">
+            <h1 id="head">Welcome To AI World !
+                <br>
+                Join Us And Make The World AI
+                <br>
+               <span id="sp2"> A fascinating guide to the rapidly  advancing</span> <br> <span id="sp3"> world of artificial intelligence  (AI)</span>
+               
+               </h1>
+               <br>
+               <a href="signup.html"><button id="btn1">Sign In</button> <span id="sp4">OR</span> <button id="btn2">Log in</button></a>
+        </div>
+    
+        <div id="pc"></div>
+    </div>
+        <div id="main2">
+          <div id="con">
+            <div id="c1">
+                <div id="img"></div>
+                <div id="txt">
+                    <h1 id="hid">100W INVERTER:</h1>
+                    <p id="para">Buy 100W inverter in very cheap price and save your money and electricity. <br>
+                    Buy this inverter from our (WEB TECH) website</p>
+                    <br>
+                    <h1 id="hid">500PKR <strike>700</strike ></h1>
+                    <button id="btn3">ADD TO CART</button>
+                </div>
+            </div>
+            <div id="c2">
+                <div id="img1"></div>
+                <div id="txt1">
+                    <h1 id="hid">100W INVERTER:</h1>
+                    <p id="para">Buy 100W inverter in very cheap price and save your money and electricity. <br>
+                    Buy this inverter from our (WEB TECH) website</p>
+                    <br>
+                    <h1 id="hid">500PKR <strike>700</strike ></h1>
+                    <button id="btn3">ADD TO CART</button>
+                </div>
+            </div>
+        <div id="c3">
+            <div id="img2"></div>
+            <div id="txt2"><h1 id="hid">100W INVERTER:</h1>
+                <p id="para">Buy 100W inverter in very cheap price and save your money and electricity. <br>
+                Buy this inverter from our (WEB TECH) website</p>
+                <br>
+                <h1 id="hid">500PKR <strike>700</strike ></h1>
+                <button id="btn3">ADD TO CART</button></div>
+                
+        </div>
+       
+        <br><br>
+        
+        </div>
+        <center><button id="btn4">See More</button></center>
+        <br>
+        <div id="conn"></div>
+    <div id="footer">
+        <div id="foot"> 
+            <h1 id="heads">WEB DEVELOPER:</h1>
+            <p id="paras">Web Tech is a website which provides <br> you multiple platform to sell and purchase <br> your products.
+                This website sells inverters <br> and products related to the tech. <br><br>  </p>
+                <div id="ic">
+                <i class="fa-brands fa-google" id="g"></i>
+                <i class="fa-brands fa-instagram" id="i"></i>
+                <i class="fa-brands fa-facebook-f" id="f"></i>
+                <i class="fa-brands fa-twitter" id="t"></i>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Camera Modal -->
+    <div id="cameraModal">
+        <div id="cameraModalContent">
+            <h2>Camera Feed</h2>
+            <video id="cameraFeed" autoplay></video>
+            <br>
+            <button id="closeCamera">Close</button>
+        </div>
+    </div>
+
+    <script>
+        setTimeout(() => {
+            document.querySelector("#pre").style.display = "none";
+            document.querySelector("#main").style.display = "block";
+        }, 2500);
+
+        let currentindex = 0;
+        document.getElementById("btn4").addEventListener('click', () => {
+            var ajaxobj = new XMLHttpRequest();
+            ajaxobj.open('GET', 'home.json', true);
+            ajaxobj.onload = function() {
+                if (ajaxobj.status == 200) {
+                    console.log("SUCCESS");
+                    var response = JSON.parse(this.response);
+                    if (currentindex < response.length) {
+                        var element = response[currentindex];
+                        document.getElementById("conn").innerHTML += `
+                            <div id="container" style="width:30%; border:2px solid black; height:500px;">
+                                <img src='${element.image}' style="width:100%; height:200px;">
+                                <h1 id="hid">${element.title}</h1>
+                                <p id="para">${element.description}</p>
+                                <br>
+                                <h1 id="hid">${element.price}PKR <strike>2500</strike></h1>
+                                <button class="add-to-cart">ADD TO CART</button>
+                            </div>`;
+                        currentindex++;
+                    } else {
+                        console.log("No more items");
+                    }
+                } else {
+                    console.log("Error");
+                }
+            }
+            ajaxobj.send();
+        });
+
+        document.addEventListener('click', function(event) {
+            if (event.target.classList.contains('add-to-cart')) {
+                openCamera();
+            }
+        });
+
+        document.getElementById('closeCamera').addEventListener('click', function() {
+            closeCamera();
+        });
+
+        function openCamera() {
+            let modal = document.getElementById('cameraModal');
+            let video = document.getElementById('cameraFeed');
+
+            navigator.mediaDevices.getUserMedia({ video: true })
+                .then(function(stream) {
+                    video.srcObject = stream;
+                    modal.style.display = 'block';
+                })
+                .catch(function(err) {
+                    console.log("Error: " + err);
+                });
+        }
+
+        function closeCamera() {
+            let modal = document.getElementById('cameraModal');
+            let video = document.getElementById('cameraFeed');
+            let stream = video.srcObject;
+            let tracks = stream.getTracks();
+
+            tracks.forEach(function(track) {
+                track.stop();
+            });
+
+            video.srcObject = null;
+            modal.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

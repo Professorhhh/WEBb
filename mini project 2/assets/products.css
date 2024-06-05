@@ -1,0 +1,293 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+ }
+  #main{
+      width: 100%;
+      height: 449vh;
+      display: block;
+      /* border: 2px solid red; */
+
+  }
+     #nav{
+      width: 100%;
+      height: 120px;
+      display: flex;
+      /* border: 2px solid purple; */
+      /* position: relative; */
+      /* opacity: 1; */
+      /* z-index: 2; */
+      
+   }
+   #child1{
+      width: 20%;
+      height: 120px;
+      /* background: url(./Capture-removebg-preview.png) no-repeat center; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+   #child2{
+      width: 80%;
+      height: 120px;
+   }
+   ul {
+      display: flex;
+      margin: 50px;
+      list-style: none;
+      gap: 190px;
+      color: white;
+      font-size: 20px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      cursor: pointer;
+  }
+   #webb{
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: red;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: 20px;
+   }
+   span{
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: 20px;
+   }
+   #sp1{
+      color: black;
+      font-weight: bolder;
+   }
+   a{
+      text-decoration: none;
+      color: black;
+   }
+  
+   #head{
+      color: black;
+   }
+   #pro{
+      width: 100%;
+      height: 65vh;
+      /* border: 2px solid black; */
+      display: flex;
+      /* margin-top: 150px; */
+   }
+   #img{
+      width: 60%;
+      height: 70vh;
+      /* border: 2px solid red; */
+      background: url(./100w.jpeg) no-repeat center;
+   }
+   #text{
+      width: 40%;
+      height: 70vh;
+      border-radius: 3px solid red;
+   }
+   #txt{
+      width: 100%;
+      height: 100px;
+      border: 1px solid white;
+
+   }
+   #hid{
+      margin-left: 20px;
+   }
+   #co{
+      width: 30%;
+      height: 30px;
+      background: url(./co.JPG) no-repeat ;
+      background-size: 200px;
+      /* border: 2px solid black; */
+      margin-left:10px;
+   }
+   #mon{
+      width: 30%;
+      height: 35px;
+      margin-left: 20px;
+  /* border: 2px solid red;  */
+  }
+   strike{
+      font-size: 30px;
+      color: gray;
+   }
+   #sp2{
+      font-size: 35px;
+      color: red;
+   }
+   #color{
+      width: 82%;
+      height: 70px;
+      /* border: 2px solid yellowgreen; */
+      display: flex;
+      margin-left: 15px;
+      gap: 20px;
+   }
+   #red{
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: red;
+   }
+   h3{
+      font-size: 25px;
+      font-weight: bolder;
+   }
+   #black{  width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: black; 
+   }
+   #yel{
+    width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: yellow;
+   }
+   #green{
+    width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: lightgreen;
+   }
+   #red:hover{
+    border: 2px solid red;
+   }
+
+   #black:hover{
+    border: 2px solid red;
+   }
+
+   #yel:hover{
+    border: 2px solid red;
+   }
+
+   #green:hover{
+    border: 2px solid red;
+   }
+   #red,#black,#yel,#green{
+      margin-top: 15px;
+   }
+   #btn1{
+      width: 250px;
+      padding: 10px;
+      border: 2px solid red;
+      background-color: red;
+      color: white; border-radius: 5px;
+      font-size: 20px;
+      margin-left: 10px;
+      cursor: pointer;
+   }
+   #btn2{
+      width: 250px;
+      padding: 10px;
+      border: 2px solid gray;
+      background-color: white;
+      color: black; border-radius: 5px;
+      font-size: 20px;
+      margin-left: 10px;
+      margin-top: 10px;
+      cursor: pointer;
+   }
+   #btn1:hover{
+    background-color: darkred;
+    border: 2px solid darkred;
+    color: white;
+   }
+   #btn2:hover{
+    background-color: darkred;
+    background-color: darkred;
+    border: 2px solid darkred;
+    color: white;
+   }
+   #imgs{
+      width: 60%;
+      height: 70vh;
+      /* border: 2px solid red; */
+      background: url(./200w.jpeg) no-repeat center;
+      /* background-color: whitesmoke; */
+   }
+   #imgss{
+      width: 60%;
+      height: 70vh;
+      /* border: 2px solid red; */
+      background: url(./300w.jpeg) no-repeat center;
+      /* background-color: whitesmoke; */
+   }
+   #imgse{
+    width: 60%;
+      height: 70vh;
+      /* border: 2px solid red; */
+      background: url(./400w.jfif) no-repeat center;
+      /* background-color: whitesmoke; */
+   }
+   #imgsee{
+    width: 60%;
+      height: 70vh;
+      /* border: 2px solid red; */
+      background: url(./sin.jfif) no-repeat center;
+      /* background-color: whitesmoke; */
+   }
+   #imgseee{
+    width: 60%;
+      height: 70vh;
+      /* border: 2px solid red; */
+      background: url(./whit.jfif) no-repeat center;
+      /* background-color: whitesmoke; */
+   }
+
+   #footer{
+      width: 100%;
+  height: 320px;
+  background-color: black;
+  border: 3px solid black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  }
+ #foot{
+  width: 40%;
+  height: 200px;
+  background-color: black;
+  border: 3px solid black;
+  color: white;
+  margin-left: 15%;
+  
+ }
+ #hides{
+  margin-top: 0 auto;
+  font-size: 35px;
+ }
+ #paras{
+  font-size: 20px;
+  margin-top: 20px;
+ }
+
+  
+ #ic{
+  width: 30%;
+  height: 50px;
+  display: flex;
+  gap: 50px;
+ }
+ #g,#i,#f,#t{
+  font-size: 35px;
+  border: 3px solid white;
+  border-radius: 50%;
+ padding: 10px;
+ height: 56px;
+ }
+ li:hover{
+          background-color: red;
+          color: white;
+          padding: 5px;
+          border-radius: 10px;
+          transition: 0.5s ease-in-out;
+          text-decoration: none;
+      }
